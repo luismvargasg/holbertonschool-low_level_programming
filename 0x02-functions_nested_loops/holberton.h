@@ -1,8 +1,4 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
-
-/* My header for task 0 */
-
+#ifndef holberton
+#define holberton
 int _putchar(char c);
-
-#endif /* _HOLBERTON_H_ */
+#endif /* holberton */

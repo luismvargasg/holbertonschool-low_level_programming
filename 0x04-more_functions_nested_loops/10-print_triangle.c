@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_diagonal - draws a diagonal line on the terminal.
+ * print_triangle - prints a triangle.
  * @size: size of the triangle
  * Return: Always 0.
  */

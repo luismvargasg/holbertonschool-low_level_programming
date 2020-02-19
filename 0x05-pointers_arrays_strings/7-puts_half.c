@@ -1,9 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * puts_half - print the second half of a string.
  * @str: Given string
+ * Retrun: always 0
  */
 
 void puts_half(char *str)
@@ -22,7 +22,7 @@ void puts_half(char *str)
 
 	for (c = half; c < lenght; c++)
 	{
-		_putchar (str[c]);
+		_putchar(str[c]);
 	}
-	_putchar ('\n');
+	_putchar('\n');
 }

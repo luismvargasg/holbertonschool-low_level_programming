@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 
 /**
  * print_number - function that prints an integer.
@@ -9,7 +10,7 @@ void print_number(int n)
 {
 	int add = 0;
 
-	if (n <= -2147483648)
+	if (n == INT_MIN )
 	{
 		n = n + 1;
 		add = 1;

@@ -1,0 +1,54 @@
+#include "holberton.h"
+
+/**
+ * *cap_string - function that capitalizes all words of a string.
+ * @s: given string
+ * Return: string.
+ */
+
+char *cap_string(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ' ')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '\n')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ',')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '.')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ';')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '!')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '?')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '"')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '(')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ')')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '{')
+			s[i] = s[i] - 32;
+
+		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '}')
+			s[i] = s[i] - 32;
+
+		i++;
+	}
+		return (s);
+}

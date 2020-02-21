@@ -7,6 +7,8 @@
 
 void print_number(int n)
 {
+	int add = 0;
+
 	if (n <= -2147483648)
 		n = n + 1;
 
@@ -20,4 +22,7 @@ void print_number(int n)
 		print_number(n / 10);
 
 	_putchar (n % 10 + '0');
+
+	if (add == 1)
+		_putchar ('8');
 }

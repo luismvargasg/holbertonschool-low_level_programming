@@ -8,47 +8,25 @@
 
 char *cap_string(char *s)
 {
-	int i = 0;
+	int ia = 0;
+	int ib;
 
-	while (s[i] != '\0')
+	char str[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\0'};
+
+	if (s[ia] >= 'a' && s[ia] <= 'z')
+		s[ia] = s[ia] - 32;
+
+	while (s[ia] != '\0')
 	{
-		if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ' ')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '\n')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ',')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '.')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ';')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '!')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '?')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '"')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '(')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == ')')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '{')
-			s[i] = s[i] - 32;
-
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i - 1] == '}')
-			s[i] = s[i] - 32;
-
-		i++;
+		if (s[ia] >= 'a' && s[ia] <= 'z')
+		{
+			for (ib = 0; str[ib] != '\0'; ib++)
+			{
+				if (s[ia - 1] == str[ib])
+					s[ia] = s[ia] - 32;
+			}
+		}
+		ia++;
 	}
-		return (s);
+	return (s);
 }

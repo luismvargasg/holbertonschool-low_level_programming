@@ -11,7 +11,7 @@ char *cap_string(char *s)
 	int ia = 0;
 	int ib;
 
-	char str[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\0'};
+	char str[] = " \t\n,;.!,?\"(){}\0";
 
 	if (s[ia] >= 'a' && s[ia] <= 'z')
 		s[ia] = s[ia] - 32;

@@ -3,7 +3,7 @@
 /**
  * _strpbrk - function that searches a string for any of a set of bytes.
  * @s: given string
- * @c: character to find
+ * @accept: characters to compare
  *
  * Return: Null or string.
  */

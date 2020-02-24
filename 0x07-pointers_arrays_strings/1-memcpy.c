@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _memcpy - function that copies memory area.
+ * _memcpy - function that copies memory area
  * @dest: destiny
  * @src: source
  * @n: number of bytes
@@ -11,14 +11,12 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int ia = 0;
-	unsigned int ib =0;
+	unsigned int i = 0;
 
-	while (ia < n)
+	while (i < n)
 	{
-		dest[ia] = src[ib];
-		ib++;
-		ia++;
+		dest[i] = src[i];
+		i++;
 	}
 
 	return (dest);

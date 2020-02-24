@@ -17,5 +17,6 @@ char *string_toupper(char *);
 void print_number(int n);
 char *cap_string(char *);
 char *leet(char *);
+char *rot13(char *);
 
 #endif /* _HOLBERTON_H_ */

@@ -11,20 +11,21 @@
 char *_strstr(char *haystack, char *needle)
 {
 
-	const char *a = haystack, *b = needle;
+	char *a = haystack;
+	char *b = needle;
 
 	for (;;)
 	{
-		if (!*b)
-			return (haystack);
-
-		if (!*a)
-			return (0);
-
 		if (*a++ != *b++)
 		{
 			a = ++haystack;
 			b = needle;
 		}
+
+		if (!*b)
+			return (haystack);
+
+		if (!*a)
+			return (0);
 	}
 }

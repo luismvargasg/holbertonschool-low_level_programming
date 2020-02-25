@@ -11,8 +11,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 
-	char *a = haystack;
-	char *b = needle;
+	const char *a = haystack;
+	const char *b = needle;
 
 	for (;;)
 	{

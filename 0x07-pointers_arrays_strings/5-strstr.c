@@ -15,11 +15,13 @@ char *_strstr(char *haystack, char *needle)
 
 	for (;;)
 	{
-		if ( !*b ) return (char *) haystack;
+		if (!*b)
+			return (haystack);
 
-		if ( !*a ) return (0);
+		if (!*a)
+			return (0);
 
-		if ( *a++ != *b++)
+		if (*a++ != *b++)
 		{
 			a = ++haystack;
 			b = needle;

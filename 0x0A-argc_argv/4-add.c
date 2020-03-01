@@ -6,29 +6,36 @@
  *
  * @argv: given argument.
  * @argc: Arguments counter.
- * Return: Always 0.
+ * Return: 1 or 0.
  */
 
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i;
+	int ia;
+	int ib;
 
-	if (argc > 1)
+	if (argc == 1)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			sum = sum + atoi(argv[i]);
-		}
-		printf("%d\n", sum);
+		printf("0\n");
 		return (0);
 	}
 
-	if (argc == 1)
-		printf("0\n");
-
 	else
-		printf("Error\n");
-
-	return (1);
+	{
+		for (ia = 1; ia < argc; ia++)
+		{
+			for (ib = 0; argv[ia][ib] != '\0'; ib++)
+			{
+				if (argv[ia][ib] < '0' || argv[ia][ib] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum = sum + atoi(argv[ia]);
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }

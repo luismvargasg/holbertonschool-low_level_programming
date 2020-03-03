@@ -24,18 +24,18 @@ char *_strdup(char *str)
 		strlen++;
 	}
 
-	array = malloc(sizeof(char) * strlen);
+	array = malloc(sizeof(char) * (strlen + 1));
 
-	if (array == NULL)
-		return (NULL);
-
-	while (i < strlen)
+	if (array != NULL)
 	{
-		array[i] = str[i];
-		i++;
+		while (i < strlen)
+		{
+			array[i] = str[i];
+			i++;
+		}
+		array[i] = '\0';
+		return (array);
 	}
-	array[i] = '\0';
-
-	return (array);
-	free(array);
+	else
+		return (NULL);
 }

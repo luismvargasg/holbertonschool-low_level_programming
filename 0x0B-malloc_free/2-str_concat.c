@@ -23,16 +23,17 @@ char *str_concat(char *s1, char *s2)
 
 	newstr = malloc(sizeof(char) * (strlenA + (strlenB + 1)));
 
-	if (newstr == NULL)
+	if (newstr != NULL)
+	{
+		while (ia < strlenA)
+			newstr[i++] = s1[ia++];
+
+		while (ib < strlenB)
+			newstr[i++] = s2[ib++];
+
+		newstr[i] = '\0';
+		return (newstr);
+	}
+	else
 		return (NULL);
-
-	while (ia < strlenA)
-		newstr[i++] = s1[ia++];
-
-	while (ib < strlenB)
-		newstr[i++] = s2[ib++];
-
-	newstr[i] = '\0';
-
-	return (newstr);
 }

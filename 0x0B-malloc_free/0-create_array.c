@@ -30,7 +30,6 @@ char *create_array(unsigned int size, char c)
 			array[i] = c;
 			i++;
 		}
-		array[i] = '\0';
 	}
 	return (array);
 }

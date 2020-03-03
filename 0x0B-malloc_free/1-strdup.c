@@ -26,9 +26,6 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	if (array == NULL)
-		return (NULL);
-
 	while (i < strlen)
 	{
 		array[i] = str[i];
@@ -36,5 +33,9 @@ char *_strdup(char *str)
 	}
 	array[i] = '\0';
 	return (array);
+
+	if (array == NULL)
+		return (NULL);
+
 	free(array);
 }

@@ -23,7 +23,7 @@ char *_strdup(char *str)
 
 	array = malloc(sizeof(char) * strlen);
 
-	if (array == NULL)
+	if (array == NULL || str == NULL)
 		return (NULL);
 
 	while (i < strlen)
@@ -33,5 +33,4 @@ char *_strdup(char *str)
 	}
 	array[i] = '\0';
 	return (array);
-	free(array);
 }

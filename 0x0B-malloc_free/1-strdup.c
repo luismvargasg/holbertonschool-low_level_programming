@@ -32,10 +32,10 @@ char *_strdup(char *str)
 		i++;
 	}
 	array[i] = '\0';
-	return (array);
 
 	if (array == NULL)
 		return (NULL);
 
+	return (array);
 	free(array);
 }

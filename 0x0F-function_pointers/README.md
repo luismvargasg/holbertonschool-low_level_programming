@@ -1,0 +1,8 @@
+This directory contains the task of the "0x0F. C - Function pointers"
+project at Holberton School.
+
+General Objectives
+
+What are function pointers and how to use them.
+What does a function pointer exactly hold.
+Where does a function pointer point to in the virtual memory.

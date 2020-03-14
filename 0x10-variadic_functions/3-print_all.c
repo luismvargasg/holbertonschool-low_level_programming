@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	int i = 0, sentinel = 0, flag = 0;
 
 	va_start(ap, format);
-	while (format[sentinel])
+	while (format && format[sentinel])
 		sentinel++;
 	while (format && format[i])
 	{

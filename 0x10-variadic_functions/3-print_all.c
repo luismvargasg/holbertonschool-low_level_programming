@@ -18,10 +18,8 @@ void print_all(const char * const format, ...)
 	int i, ix = 0, sentinel = 0, flag = 0;
 
 	va_start(ap, format);
-
 	while (format[sentinel])
 		sentinel++;
-
 	while (format[ix])
 	{
 	switch (format[ix++])

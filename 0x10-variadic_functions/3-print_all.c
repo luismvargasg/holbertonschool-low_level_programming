@@ -6,47 +6,45 @@
 /**
  * print_all - function that prints anything.
  * @format: list of types of arguments passed to the function.
- *
  * Return: nothing.
  */
 
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char c, *s;
-	float f;
-	int i, ix = 0, sentinel = 0, flag = 0;
+	char *s;
+	int i = 0, sentinel = 0, flag = 0;
 
 	va_start(ap, format);
 	while (format[sentinel])
 		sentinel++;
-	while (format[ix])
+	while (format[i])
 	{
-	switch (format[ix++])
+	switch (format[i++])
 	{
 	case 'c':
-		c = (char) va_arg(ap, int);
-		printf("%c", c);
+		printf("%c", va_arg(ap, int));
 		break;
 	case 'i':
-		i = va_arg(ap, int);
-		printf("%i", i);
+		printf("%i", va_arg(ap, int));
 		break;
 	case 'f':
-		f = (float) va_arg(ap, double);
-		printf("%f", f);
+		printf("%f", va_arg(ap, double));
 		break;
 	case 's':
 		s = va_arg(ap, char *);
 		if (s == NULL)
+		{
 			printf("(nil)");
+			break;
+		}
 		printf("%s", s);
 		break;
 	default:
 		flag = 1;
 		break;
 	}
-	if (ix < sentinel && flag != 1)
+	if (i < sentinel && flag != 1)
 		printf(", ");
 	flag = 0;
 	}

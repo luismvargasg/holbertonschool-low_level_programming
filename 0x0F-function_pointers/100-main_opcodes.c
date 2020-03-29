@@ -6,9 +6,10 @@
  * @argc: number of parameters.
  * @argv: given arguments.
  *
+ * Return: always 0.
  */
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int op_num, i = 0;
 	char *mainptr = (char *)main;
@@ -32,4 +33,5 @@ void main(int argc, char *argv[])
 			printf(" ");
 	}
 	printf("\n");
+	return (0);
 }

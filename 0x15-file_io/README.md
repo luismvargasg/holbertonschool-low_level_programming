@@ -17,11 +17,11 @@ This directory contains the tasks of the "0x15. C - File I/O" project at Holbert
 
 In Unix, a **file descriptor "FD"** is an abstract indicator or handle used to access a file of another I/O resource. FD form part of the POSIX (Portable Operating System Interface) application programming interface. A FD is a non-negative integer **type int in C programming.**
 
-#### Each Unix proccess should expect to have 3 standar POSIX FD, corresponding to the 3 standard streams (preconnected input and output communication channels):
+#### Each Unix proccess should expect to have 3 standard POSIX FD, corresponding to the 3 standard streams (preconnected input and output communication channels):
 
 
-| Integer value   | Name | <unistd.h> symbolic constant | <stdio.h> file stream |
+| Name | <unistd.h> symbolic constant | <stdio.h> file stream | Integer value |
 |--------|--------|--------|--------|
-| 0 | Standar input | STDIN_FILENO | stdin |
-| 1      | Standard output | STDOUT_FILENO | stdout |
-| 2      | Standard error | STDERR_FILENO | stderr |
+| Standar input | STDIN_FILENO | stdin | 0 |
+| Standard output | STDOUT_FILENO | stdout | 1 |
+| Standard error | STDERR_FILENO | stderr | 2 |

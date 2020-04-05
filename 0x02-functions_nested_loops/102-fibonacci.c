@@ -10,14 +10,16 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long int n = 1;
+	unsigned long int a = 0, b = 1, res = 0;
 
 	while (i < 50)
 	{
-		printf("%lu", n);
+		res = a + b;
+		a = b;
+		b = res;
+		printf("%lu", res);
 		if (i < 49)
 			printf(", ");
-		n += n;
 		i++;
 	}
 	printf("\n");

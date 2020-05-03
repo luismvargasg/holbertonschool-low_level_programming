@@ -36,7 +36,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(cursor);
 		return (1); /* succeeded */
 	}
-	else if (i == index && cursor->next == NULL)
+	else if (i == index && cursor->next == NULL) /* case: last node, end */
 	{
 		cursor->prev->next = NULL;
 		free(cursor);

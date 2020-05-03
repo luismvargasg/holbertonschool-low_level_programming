@@ -14,9 +14,9 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node, *temp = *h;
-	unsigned int i = 1;
+	unsigned int i = 1; /* stop 1 step behind in the list */
 
-	if (idx == 0)
+	if (idx == 0) /* case: new_node needs to be the head */
 		return (add_dnodeint(h, n));
 
 	new_node = malloc(sizeof(dlistint_t));
@@ -25,20 +25,20 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	new_node->n = n;
 
-	while (i < idx && temp != NULL)
+	while (i < idx && temp != NULL) /* traverse list until index -1 */
 	{
 		temp = temp->next;
 		i++;
 	}
-	if (i == idx && temp->next != NULL)
+	if (i == idx && temp->next != NULL) /* hits the expected position */
 	{
-		new_node->prev = temp;
-		new_node->next = temp->next;
-		temp->next->prev = new_node;
-		temp->next = new_node;
+		new_node->prev = temp; /* points new_node to previous node */
+		new_node->next = temp->next; /* points new_node to next node */
+		temp->next->prev = new_node; /* points next node to new_node */
+		temp->next = new_node; /* points previous node to new_node */
 		return (new_node);
 	}
-	else if (i == idx && new_node->next == NULL)
+	else if (i == idx && new_node->next == NULL) /* case: new_node at end */
 		return (add_dnodeint_end(h, n));
 	free(new_node);
 	return (NULL);

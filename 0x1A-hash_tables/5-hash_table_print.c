@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 					printf(", ");
 					flag = 0;
 				}
-				printf("%s: '%s'", ht->array[ix]->key, ht->array[ix]->value);
+				printf("'%s': '%s'", ht->array[ix]->key, ht->array[ix]->value);
 				ht->array[ix] = ht->array[ix]->next;
 				flag =  1;
 			}

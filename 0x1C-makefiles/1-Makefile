@@ -1,5 +1,5 @@
-CC = gcc	# compiler to use
-SRC = $(wildcard *.c)	# source files
+CC = gcc
+SRC = $(wildcard *.c)
 
 all:
-		${CC} ${SRC} -o holberton
+		$(CC) $(SRC) -o holberton
